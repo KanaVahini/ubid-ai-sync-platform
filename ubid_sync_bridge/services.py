@@ -2,8 +2,6 @@ import requests
 import uuid
 from datetime import datetime
 from rapidfuzz import fuzz
-from sklearn.tree import DecisionTreeClassifier
-from rapidfuzz import fuzz
 
 
 # =========================================
@@ -273,30 +271,13 @@ update_frequency = {}
 
 
 # =========================================
-# ML MODEL
+# ML MODEL (Not currently used)
 # =========================================
 
-# features:
-# [source, time_diff]
-
-X = [
-
-    [1, 1],
-    [1, 2],
-    [0, 10],
-    [0, 8],
-    [1, 3]
-
-]
-
-# 1 = SWS wins
-# 0 = DEPT wins
-
-y = [1, 1, 0, 0, 1]
-
-model = DecisionTreeClassifier()
-
-model.fit(X, y)
+# features: [source, time_diff]
+# Training data for future use
+# X = [[1, 1], [1, 2], [0, 10], [0, 8], [1, 3]]
+# y = [1, 1, 0, 0, 1]  # 1 = SWS wins, 0 = DEPT wins
 
 
 # =========================================
