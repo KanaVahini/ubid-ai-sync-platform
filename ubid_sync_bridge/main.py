@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-app = FastAPI()
+app = FastAPI(
+    title="UBID AI Sync Platform",
+    description="AI-Augmented Government Interoperability Intelligence Layer",
+    version="1.0.0"
+)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
